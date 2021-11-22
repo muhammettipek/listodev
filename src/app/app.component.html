@@ -1,0 +1,17 @@
+ <div class="row d-flex justify-content-center">
+    <div class="col-8">
+      <h3 id="listeval" class="bg-dark text-white p-2" [(ngModel)]="listeval" style="text-align: center;">{{listeval}}
+
+        <button routerLink="/form" id="eklebtn" (click)="ataindex(0,'ekle')" class="btn  btn-primary ">Ekle</button>&nbsp;
+        <button routerLink="/list" id="listebtn" class="btn btn-primary" >Listele</button>
+
+      </h3>
+      <div>
+      <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+
+
+
+

@@ -1,0 +1,52 @@
+<div id="anadiv" class=" align-items-center d-flex justify-content-center">
+<div  class="justify-content-center ">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <input required type="text" class="form-control" id="isim" [(ngModel)]="inputadi" #txtisim="ngModel"
+               placeholder="İsim" [disabled]="isEnabled">
+        <div class="alert alert-danger" *ngIf="!txtisim.valid && txtisim.touched"
+             style="  text-align: center;">Lütfen bu alanı boş bırakmayınız
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <input required type="text" class="form-control" id="soyisim" [(ngModel)]="inputsoy" #txtsisim="ngModel"
+               placeholder="Soyisim" [disabled]="isEnabled">
+        <div class="alert alert-danger" *ngIf="!txtsisim.valid && txtsisim.touched">Lütfen bu alanı boş bırakmayınız
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <input required type="text" class="form-control" id="departman" [(ngModel)]="inputdept" #txtdept="ngModel"
+               placeholder="Departman" [disabled]="isEnabled">
+        <div class="alert alert-danger" *ngIf="!txtdept.valid && txtdept.touched">Lütfen bu alanı boş bırakmayınız</div>
+      </div>
+
+      <div class="mb-3 col-md-6">
+        <input type="text" class="form-control" id="uyruk" [(ngModel)]="inputuyruk" #txtuyruk placeholder="Uyruk"
+               [disabled]="isEnabled">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class=" col-md-6">
+        <input type="Date" class="form-control date" id="date" [(ngModel)]="inputdg" #txtdogm placeholder="Doğum Tarihi"
+               [disabled]="isEnabled">
+      </div>
+
+      <div class="col-md-4 ">
+        <input required type="text" class="form-control" id="id" [(ngModel)]="inputid" #id="ngModel" placeholder="ID"
+               [disabled]="isEnabled">
+        <div class="alert alert-danger" *ngIf="!id.valid && id.touched">Lütfen bu alanı boş bırakmayınız</div>
+      </div>
+      <div class=" col-md-2" style="padding: 1px">
+        <button routerLink="/" id="button" (click)="btnclick()" class="btn btn-primary">{{btnval}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
